@@ -20,7 +20,7 @@
 
         <v-list class="pa-2">
           <v-subheader>ソーシャル</v-subheader>
-          <v-list-item v-for="(item, i) in socialItems" :key="i" :href="item.url" target="_blank">
+          <v-list-item v-for="(item, i) in socialItems" :key="`social-${i}`" :href="item.url" target="_blank">
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -28,7 +28,7 @@
           </v-list-item>
 
           <v-subheader>サーバーリスト</v-subheader>
-          <v-list-item v-for="(item, i) in serverListItems" :key="i" :href="item.url" target="_blank">
+          <v-list-item v-for="(item, i) in serverListItems" :key="`server-list-${i}`" :href="item.url" target="_blank">
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
