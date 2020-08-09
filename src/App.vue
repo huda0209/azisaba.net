@@ -20,8 +20,15 @@
 
         <v-list class="pa-2">
           <v-subheader>ソーシャル</v-subheader>
-
           <v-list-item v-for="(item, i) in socialItems" :key="i" :href="item.url" target="_blank">
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+
+          <v-subheader>サーバーリスト</v-subheader>
+          <v-list-item v-for="(item, i) in serverListItems" :key="i" :href="item.url" target="_blank">
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -50,6 +57,11 @@
         { title: "Twitter", icon: "mdi-twitter", url: "https://twitter.com/AzisabaNetwork" },
         { title: "GitHub", icon: "mdi-github", url: "https://github.com/AzisabaNetwork" },
         { title: "YouTube", icon: "mdi-youtube", url: "https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg" },
+      ],
+      serverListItems: [
+        { title: "Japan Minecraft Servers", icon: "mdi-diamond", url: "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d" },
+        { title: "monocraft", icon: "mdi-checkbox-blank", url: "https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v" },
+        { title: "NameMC", icon: "mdi-alpha-n-box", url: "https://ja.namemc.com/server/azisaba.net" },
       ],
     }),
   };
