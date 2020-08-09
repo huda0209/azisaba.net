@@ -2,7 +2,6 @@
   <div id="app">
     <AppHeader />
     <p>準備中です...</p>
-    <p>Discord: <a href="https://discord.gg/seheC2W">https://discord.gg/seheC2W</a></p>
   </div>
 </template>
 
