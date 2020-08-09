@@ -14,7 +14,7 @@
       <v-menu transition="slide-y-transition" :close-on-content-click="false" offset-y>
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-on="on" v-bind="attrs" icon>
-            <v-icon>mdi-dots-vertical</v-icon>
+            <v-icon>mdi-open-in-new</v-icon>
           </v-btn>
         </template>
 
@@ -49,7 +49,7 @@
         { title: "Discord", icon: "mdi-discord", url: "https://discord.gg/seheC2W" },
         { title: "Twitter", icon: "mdi-twitter", url: "https://twitter.com/AzisabaNetwork" },
         { title: "GitHub", icon: "mdi-github", url: "https://github.com/AzisabaNetwork" },
-        { title: "YouTube", icon: "mdi-twitter", url: "https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg" },
+        { title: "YouTube", icon: "mdi-youtube", url: "https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg" },
       ],
     }),
   };
