@@ -28,7 +28,7 @@
 
 <style lang="scss" scoped>
   #root {
-    background: linear-gradient(to left top, white, palegreen);
+    background: linear-gradient(to bottom right, palegreen, lightgreen);
   }
 
   #view {
