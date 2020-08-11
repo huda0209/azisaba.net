@@ -1,62 +1,64 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="#144552">
+    <v-app-bar app dark>
 
-      <v-img alt="logo" class="shrink" contain src="/favicon.ico" transition="scale-transition" width="48" />
-      <v-toolbar-title class="ml-3">アジ鯖</v-toolbar-title>
+      <v-container class="d-flex align-center">
+        <v-img alt="logo" class="shrink" contain src="/favicon.ico" transition="scale-transition" width="48" />
+        <v-toolbar-title class="headline ml-3">アジ鯖</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <v-menu offset-y transition="slide-y-transition" :close-on-content-click="false" v-for="(column, i) in menu" :key="i">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn class="d-none d-md-flex" v-on="on" v-bind="attrs" :href="column.header.href" target="_blank" text>
-            <v-icon left>{{ column.header.icon }}</v-icon>
-            {{ column.header.title }}
-          </v-btn>
-        </template>
-        <v-list class="pa-2" v-if="column.items">
-          <v-list-item v-for="(item, i) in column.items" :key="i" :href="item.href" target="_blank">
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+        <v-menu offset-y transition="slide-y-transition" :close-on-content-click="false" v-for="(column, i) in menu" :key="i">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn v-on="on" v-bind="attrs" class="d-none d-md-flex" :href="column.header.href" target="_blank" text>
+              <v-icon left>{{ column.header.icon }}</v-icon>
+              {{ column.header.title }}
+            </v-btn>
+          </template>
+          <v-list class="pa-2" v-if="column.items">
+            <v-list-item v-for="(item, i) in column.items" :key="i" :href="item.href" target="_blank">
+              <v-list-item-icon>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
 
-      <v-btn class="d-md-none" @click="menuDrawer = !menuDrawer" icon>
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+        <v-menu offset-y transition="slide-y-transition" :close-on-content-click="false">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn v-on="on" v-bind="attrs" class="d-md-none" @click="mobileMenu = !mobileMenu" icon>
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
+          </template>
+          <v-expansion-panels>
+            <v-expansion-panel v-for="(column, i) in menu" :key="i">
+              <v-expansion-panel-header>
+                <div>
+                  <v-icon left>{{ column.header.icon }}</v-icon>
+                  {{ column.header.title }}
+                </div>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-btn v-if="column.header.href" :href="column.header.href" target="_blank" text>
+                  {{ column.header.title }}
+                </v-btn>
+                <v-list>
+                  <v-list-item v-for="(item, j) in column.items" :key="j" :href="item.href" target="_blank">
+                    <v-list-item-icon>
+                      <v-icon>{{ item.icon }}</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-menu>
+      </v-container>
 
     </v-app-bar>
     <v-main>
-
-      <v-navigation-drawer temporary fixed right v-model="menuDrawer">
-        <v-expansion-panels>
-          <v-expansion-panel v-for="(column, i) in menu" :key="i">
-            <v-expansion-panel-header>
-              <div>
-                <v-icon left>{{ column.header.icon }}</v-icon>
-                {{ column.header.title }}
-              </div>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <v-btn v-if="column.header.href" :href="column.header.href" target="_blank" text>
-                {{ column.header.title }}
-              </v-btn>
-              <v-list>
-                <v-list-item v-for="(item, j) in column.items" :key="j" :href="item.href" target="_blank">
-                  <v-list-item-icon>
-                    <v-icon>{{ item.icon }}</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </v-navigation-drawer>
-
       <p>準備中です...</p>
     </v-main>
   </v-app>
@@ -71,7 +73,7 @@
     },
 
     data: () => ({
-      menuDrawer: null,
+      mobileMenu: null,
       menu: [
         {
           header: { title: "寄付する", icon: "mdi-heart", href: "https://azisaba.buycraft.net" },
