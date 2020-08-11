@@ -31,7 +31,7 @@
               <v-icon>mdi-menu</v-icon>
             </v-btn>
           </template>
-          <v-expansion-panels>
+          <v-expansion-panels accordion focusable>
             <v-expansion-panel v-for="(column, i) in menu" :key="i">
               <v-expansion-panel-header>
                 <div>
