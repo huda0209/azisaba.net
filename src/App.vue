@@ -59,17 +59,19 @@
 
     </v-app-bar>
     <v-main>
-      <p>準備中です...</p>
+      <AppHome />
     </v-main>
   </v-app>
 </template>
 
 <script>
+  import AppHome from './components/AppHome'
+
   export default {
     name: 'App',
 
     components: {
-      //
+      AppHome,
     },
 
     data: () => ({
