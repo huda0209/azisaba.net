@@ -15,8 +15,8 @@ jobs:
       - run: npm run build
       - uses: actions/upload-artifact@master
         with:
-          name: dist
-          path: dist
+          name: public
+          path: public
   deploy:
     name: Deploy
     needs: build
@@ -25,8 +25,8 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/download-artifact@master
         with:
-          name: dist
-          path: dist
+          name: public
+          path: public
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting

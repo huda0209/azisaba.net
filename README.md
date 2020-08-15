@@ -1,24 +1,13 @@
 # azisaba.net
+アジ鯖、たのしい。
 
-## Project setup
+## インストール
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## 起動
 ```
-npm run serve
+npm install -g gatsby-cli
+gatsby develop
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
