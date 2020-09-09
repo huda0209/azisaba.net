@@ -1,0 +1,107 @@
+---
+title: プラグイン導入可能なマインクラフトサーバーを最速で立てる方法
+date: 2020-09-09
+tags:
+  - マインクラフトサーバー
+  - Bukkit
+  - Spigot
+  - Paper
+slug: "/make-minecraft-server"
+---
+
+どうもこんにちは、普段はアジ鯖開発者のゆきです。
+
+マルチプレイできるサーバーが立てたい...
+
+バニラだけじゃなく、プラグイン入れて機能追加したい...
+
+少し前まではサーバーを自分でビルドしていましたが、Paperというものが登場しやり方も変わっているので改めて解説します！
+
+### BukkitとSpigotについて知っておいてほしい事
+
+以前からマルチプレイ界隈で活躍していた、マインクラフトサーバーを改造した[Bukkit](https://dev.bukkit.org)というサーバーソフトウェアがあります。
+
+![](https://images.weserv.nl/?url=https://www.userlogos.org/files/logos/Diamond00744/bukkit_2.png&w=500)
+
+そしてそのBukkitに機能を追加して、パフォーマンスも優れた改良版の[Spigot](https://www.spigotmc.org)があります。
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/JkYMKX6.png&w=500)
+
+##### Bukkitの解散
+
+時は2014年、Bukkit開発チームはマインクラフトサーバーの改造バージョンがMojangに公式に許可をもらっておらず、自信をもって配布することが出来なくなったとして、モチベ不足のためにプロジェクトを廃止することを[決めました](https://bukkit.org/threads/bukkit-its-time-to-say.305106/)。
+
+##### Mojangによる乗っ取り
+
+この発表後に、MojangがBukkitのプロジェクトを密かに所有していたことを明らかにして、BukkitプロジェクトをMojangが乗っ取りました。
+
+##### DMCAテイクダウン
+
+Bukkitチームの一人であるWolvereness氏は、Bukkitのソースコードまたはバイナリの配布を停止するか、GPLの配布条件に従うように提案します。
+
+その後、同氏はDMCAテイクダウンを申請し、すべてのサイトからBukkitをダウンロード出来なくしました。 (GitHubから強制的に[CraftBukkit](https://github.com/Bukkit/CraftBukkit)や[Spigot](https://github.com/SpigotMC/Spigot)も消されてしまう)
+
+![](https://images.weserv.nl/?url=https://techedonline.org/wp-content/uploads/2015/01/Screen-Shot-2015-01-14-at-10.01.28-AM.png&w=800)
+
+そしてSpigotもBukkitの改良バージョンのため、このDMCAテイクダウンの影響を受けることになります。
+
+Spigot開発チームはWolvereness氏のコードを書き直すか、削除を受け入れるかに[迫られました](https://www.spigotmc.org/threads/our-dmca-response.28772/)。
+
+##### BuildTools
+
+そこでSpigotは[BuildTools](https://www.spigotmc.org/wiki/buildtools/)を開発し、パソコンでコンパイルさせることでこれを回避しました。 (天才かな？)
+
+しかし、以前までは「ダウンロードするだけ」だったものが「環境を整えて自分でビルドする」というサーバー導入の手間がかかるようになってしまいました。
+
+### Paperについて
+
+そしてここで登場するのが[Paper](https://papermc.io)です！！
+
+PaperはSpigotをさらに最適化し、多数のバグ修正を含んています。
+
+![](https://images.weserv.nl/?url=https://repository-images.githubusercontent.com/50160261/0fb22780-7509-11e9-835b-9a0444ebde26&w=500)
+
+##### プラグインをそのまま使える
+
+BukkitやSpigotで使えるプラグインと互換性があるので、ほとんどのユーザーがそのまま移行することが出来ます。便利
+
+##### Paperclip
+
+さらにPaperでは、[Paperclip](https://github.com/PaperMC/Paperclip)というバイナリパッチを生成してファイルに突っ込んで配布し、実行時にバニラサーバーにパッチを当てるというシステムを採用しています。
+
+そのおかげで、前述の**著作権の問題を回避**し、**ビルド不要でダウンロードが可能**です！
+
+これはもうPaperをダウンロードするしかないのでは！？
+
+### まずはJavaをインストール！
+
+ほら出た。
+
+またインストールするだけでとんでもない時間かかるんだろと。いいや違います。
+
+PaperはJavaで書かれているので動かすにはJavaが必要です。
+
+そしてオラクルのサイトがログイン必須になってしまったので今回はOpenJDKを使用します！(重要)
+
+##### Javaインストール手順
+
+1. [AdoptOpenJDK](https://adoptopenjdk.net)のサイトにアクセスします。
+2. `Choose a Version`の項目で`OpenJDK 8 (LTS)`を選択します。
+3. 下の`Latest release`をクリックしてダウンロード開始！
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/J9NMmKf.png&w=600)
+
+4. ダウンロードが終わったら起動します！適当にポチポチしてたら完了します。
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/hY6xNXr.png&w=600)
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/RsW0J7T.png&w=600)
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/WbyY1kl.png&w=600)
+
+### そしてPaperをダウンロード！
+
+1. Paper公式サイトの[ダウンロードページ](https://papermc.io/downloads)を開きます。
+2. ダウンロードしたいファイルをクリックします。 (画像ではバージョン1.16.2用のサーバーをダウンロードしています！)
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/y2QgS9U.png&w=600)

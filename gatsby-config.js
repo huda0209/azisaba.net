@@ -6,7 +6,11 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `アジ鯖開発ブログ`,
+    siteDescription: `アジ鯖が運営するちょっとした開発ブログです。`,
+    siteUrl: `https://blog.azisaba.net`,
+    author: `@YukiLeafX`,
+    siteTitleAlt: `アジ鯖開発ブログ - 今日から開発者`,
   },
   plugins: [
     {
@@ -15,22 +19,22 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
+            title: `ブログ`,
             slug: `/blog`,
           },
           {
-            title: `About`,
+            title: `説明`,
             slug: `/about`,
           },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `Discord`,
+            url: `https://discord.gg/seheC2W`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Twitter`,
+            url: `https://twitter.com/AzisabaNetwork`,
           },
         ],
       },
