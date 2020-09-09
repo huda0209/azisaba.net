@@ -6,7 +6,7 @@ tags:
   - Bukkit
   - Spigot
   - Paper
-slug: "/make-minecraft-server"
+slug: "/make-minecraft-server/"
 ---
 
 どうもこんにちは、普段はアジ鯖開発者のゆきです。
@@ -104,4 +104,55 @@ PaperはJavaで書かれているので動かすにはJavaが必要です。
 1. Paper公式サイトの[ダウンロードページ](https://papermc.io/downloads)を開きます。
 2. ダウンロードしたいファイルをクリックします。 (画像ではバージョン1.16.2用のサーバーをダウンロードしています！)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/y2QgS9U.png&w=600)
+![](https://images.weserv.nl/?url=https://i.imgur.com/y2QgS9U.png&w=900)
+
+3. そしてダウンロードしたものを新しいフォルダに移動しよう！ (今回は`server`という名前にしました)
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/ZDOvJ2o.png&w=600)
+
+### ダブルクリックで起動可能にする
+
+1. Paperと同じフォルダ内で右クリックして`新規作成`から`テキスト ドキュメント`を選択！
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/4Tsw7yc.png&w=600)
+
+2. `start.bat`という名前に変更します。 (拡張子が`.bat`ならなんでもOK)
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/mZ2Dc8h.png&w=600)
+
+3. 作成した`start.bat`を右クリックして`編集`を選択します。
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/U9beOOc.png&w=600)
+
+4. 以下の内容を入力します。 (`paper-186.jar`の部分を自分のPaperのファイル名と合わせよう！)
+
+```batch
+@echo off
+java -Dcom.mojang.eula.agree=true -jar paper-186.jar nogui
+```
+
+5. 入力し終わったら、`Ctrl`キーと`S`キーを同時押しして保存してから閉じます！
+
+### 早速起動してみるぜ？
+
+1. `start.bat`を**ダブルクリック**します！
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/7I3FT3D.png&w=600)
+
+2. 勝手に起動します。`Done`と表示されれば完了！
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/59t5XIb.png&w=800)
+
+そしたらサーバーは一旦おいといて、マインクラフトを起動します。
+
+マルチプレイからサーバーを追加し、サーバーアドレスに`127.0.0.1`を使用してください。
+
+どうでしょうか？入れましたでしょうか？
+
+![](https://images.weserv.nl/?url=https://i.imgur.com/wT4Z8MH.png?w=900)
+
+### まとめ
+
+個人的には以前よりもサーバーのダウンロードから接続までが簡単になったように感じます。
+
+もしうまくいかない場合は手順が間違っていないか確認しながらもう一度試してみてください！それではよいプラグインライフを！
