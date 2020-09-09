@@ -21,11 +21,11 @@ slug: "/make-minecraft-server/"
 
 以前からマルチプレイ界隈で活躍していた、マインクラフトサーバーを改造した[Bukkit](https://dev.bukkit.org)というサーバーソフトウェアがあります。
 
-![](https://images.weserv.nl/?url=https://www.userlogos.org/files/logos/Diamond00744/bukkit_2.png&w=500)
+![](bukkit-logo.png)
 
 そしてそのBukkitに機能を追加して、パフォーマンスも優れた改良版の[Spigot](https://www.spigotmc.org)があります。
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/JkYMKX6.png&w=500)
+![](spigot-logo.png)
 
 ##### Bukkitの解散
 
@@ -41,7 +41,7 @@ Bukkitチームの一人であるWolvereness氏は、Bukkitのソースコード
 
 その後、同氏はDMCAテイクダウンを申請し、すべてのサイトからBukkitをダウンロード出来なくしました。 (GitHubから強制的に[CraftBukkit](https://github.com/Bukkit/CraftBukkit)や[Spigot](https://github.com/SpigotMC/Spigot)も消されてしまう)
 
-![](https://images.weserv.nl/?url=https://techedonline.org/wp-content/uploads/2015/01/Screen-Shot-2015-01-14-at-10.01.28-AM.png&w=800)
+![](craftbukkit-dmca-takedown.png)
 
 そしてSpigotもBukkitの改良バージョンのため、このDMCAテイクダウンの影響を受けることになります。
 
@@ -59,7 +59,7 @@ Spigot開発チームはWolvereness氏のコードを書き直すか、削除を
 
 PaperはSpigotをさらに最適化し、多数のバグ修正を含んています。
 
-![](https://images.weserv.nl/?url=https://repository-images.githubusercontent.com/50160261/0fb22780-7509-11e9-835b-9a0444ebde26&w=500)
+![](paper-logo.png)
 
 ##### プラグインをそのまま使える
 
@@ -89,40 +89,40 @@ PaperはJavaで書かれているので動かすにはJavaが必要です。
 2. `Choose a Version`の項目で`OpenJDK 8 (LTS)`を選択します。
 3. 下の`Latest release`をクリックしてダウンロード開始！
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/J9NMmKf.png&w=600)
+![](jdk-download.png)
 
 4. ダウンロードが終わったら起動します！適当にポチポチしてたら完了します。
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/hY6xNXr.png&w=600)
+![](jdk-installer-open.png)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/RsW0J7T.png&w=600)
+![](jdk-installer-welcome.png)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/WbyY1kl.png&w=600)
+![](jdk-installer-finish.png)
 
 ### そしてPaperをダウンロード！
 
 1. Paper公式サイトの[ダウンロードページ](https://papermc.io/downloads)を開きます。
 2. ダウンロードしたいファイルをクリックします。 (画像ではバージョン1.16.2用のサーバーをダウンロードしています！)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/y2QgS9U.png&w=900)
+![](paper-download.png)
 
 3. そしてダウンロードしたものを新しいフォルダに移動しよう！ (今回は`server`という名前にしました)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/ZDOvJ2o.png&w=600)
+![](paper-copy-file.png)
 
 ### ダブルクリックで起動可能にする
 
 1. Paperと同じフォルダ内で右クリックして`新規作成`から`テキスト ドキュメント`を選択！
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/4Tsw7yc.png&w=600)
+![](batch-create.png)
 
 2. `start.bat`という名前に変更します。 (拡張子が`.bat`ならなんでもOK)
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/mZ2Dc8h.png&w=600)
+![](batch-rename.png)
 
 3. 作成した`start.bat`を右クリックして`編集`を選択します。
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/U9beOOc.png&w=600)
+![](batch-edit.png)
 
 4. 以下の内容を入力します。 (`paper-186.jar`の部分を自分のPaperのファイル名と合わせよう！)
 
@@ -137,11 +137,11 @@ java -Dcom.mojang.eula.agree=true -jar paper-186.jar nogui
 
 1. `start.bat`を**ダブルクリック**します！
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/7I3FT3D.png&w=600)
+![](paper-start.png)
 
 2. 勝手に起動します。`Done`と表示されれば完了！
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/59t5XIb.png&w=800)
+![](paper-done.png)
 
 そしたらサーバーは一旦おいといて、マインクラフトを起動します。
 
@@ -149,7 +149,7 @@ java -Dcom.mojang.eula.agree=true -jar paper-186.jar nogui
 
 どうでしょうか？入れましたでしょうか？
 
-![](https://images.weserv.nl/?url=https://i.imgur.com/wT4Z8MH.png?w=900)
+![](minecraft-join.png)
 
 ### まとめ
 
