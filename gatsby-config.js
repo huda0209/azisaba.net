@@ -6,11 +6,11 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `アジ鯖開発ブログ`,
-    siteDescription: `アジ鯖が運営するちょっとした開発ブログです。`,
+    siteTitleAlt: `アジ鯖ブログ - @azisaba/blog.azisaba.net`,
+    siteTitle: `アジ鯖ブログ`,
+    siteDescription: `アジ鯖が運営するちょっとしたブログです。`,
     siteUrl: `https://blog.azisaba.net`,
     author: `@YukiLeafX`,
-    siteTitleAlt: `アジ鯖開発ブログ - 今日から開発者`,
   },
   plugins: [
     {
@@ -19,7 +19,7 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `ブログ`,
+            title: `記事一覧`,
             slug: `/blog`,
           },
           {
@@ -49,12 +49,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `アジ鯖ブログ - @azisaba/blog.azisaba.net`,
+        short_name: `アジ鯖ブログ`,
+        description: `マインクラフトサーバーのアジ鯖が運営するとてもシンプルなブログです。サーバーの情報からサーバー開発のいろはまでいろいろな記事を書きます。`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#f00`,
         display: `standalone`,
         icons: [
           {
