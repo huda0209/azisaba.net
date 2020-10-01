@@ -6,10 +6,10 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `アジ鯖ブログ - @azisaba/blog.azisaba.net`,
-    siteTitle: `アジ鯖ブログ`,
-    siteDescription: `アジ鯖が運営するちょっとしたブログです。`,
-    siteUrl: `https://blog.azisaba.net`,
+    siteTitleAlt: `アジ鯖 - アジ鯖、たのしい。`,
+    siteTitle: `アジ鯖`,
+    siteDescription: `アジ鯖、たのしい。`,
+    siteUrl: `https://azisaba.net`,
     author: `@YukiLeafX`,
   },
   plugins: [
@@ -19,12 +19,28 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `記事一覧`,
+            title: `ホーム`,
+            slug: `/`,
+          },
+          {
+            title: `はじめに`,
+            slug: `/welcome`,
+          },
+          {
+            title: `ルール`,
+            slug: `/terms`,
+          },
+          {
+            title: `参加方法`,
+            slug: `/how-to-join`,
+          },
+          {
+            title: `📚 すべての記事`,
             slug: `/blog`,
           },
           {
-            title: `説明`,
-            slug: `/about`,
+            title: `🏷 すべてのタグ`,
+            slug: `/tags`,
           },
         ],
         externalLinks: [
@@ -36,6 +52,10 @@ module.exports = {
             name: `Twitter`,
             url: `https://twitter.com/AzisabaNetwork`,
           },
+          {
+            name: `YouTube`,
+            url: `https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg`,
+          }
         ],
       },
     },
@@ -49,12 +69,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `アジ鯖ブログ - @azisaba/blog.azisaba.net`,
-        short_name: `アジ鯖ブログ`,
-        description: `マインクラフトサーバーのアジ鯖が運営するとてもシンプルなブログです。サーバーの情報からサーバー開発のいろはまでいろいろな記事を書きます。`,
+        name: `アジ鯖 - アジ鯖、たのしい。`,
+        short_name: `アジ鯖`,
+        description: `アジ鯖、たのしい。`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#f00`,
+        theme_color: `#345`,
         display: `standalone`,
         icons: [
           {

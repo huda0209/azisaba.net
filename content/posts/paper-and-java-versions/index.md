@@ -2,11 +2,8 @@
 title: Paperが動作するJavaバージョン一覧
 date: 2020-09-23
 tags:
-  - マインクラフト
+  - Minecraft
   - サーバー開発
-  - CraftBukkit
-  - Spigot
-  - Paper
 slug: "/paper-and-java-versions"
 ---
 
