@@ -1,0 +1,183 @@
+[build]
+  publish = "public/"
+  command = "gatsby build"
+
+[[redirects]]
+  from = "/discord"
+  to = "https://discord.gg/seheC2W"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/donate"
+  to = "https://store.azisaba.net"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/jms"
+  to = "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vote"
+  to = "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d/vote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/external"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/login"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-leongunwar"
+  to = "/servers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admin-introduction"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admins"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/info/admin"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/info/admins"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/information/administrators"
+  to = "/staff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/info/rules"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/information/rules"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rules"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wiki/how-to-join"
+  to = "/how-to-join"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guide/how-to-join"
+  to = "/how-to-join"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about/*"
+  to = "/servers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/info/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/information/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/broadcast/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/news/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/announcements/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guide/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/main-guide/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wiki/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/tags"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/*"
+  to = "/tags"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/author/*"
+  to = "/staff"
+  status = 301
+  force = true
