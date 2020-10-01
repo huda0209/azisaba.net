@@ -21,14 +21,14 @@
 /guide/how-to-join /how-to-join 301!
 
 /about/* /servers 301!
-/info/*  301!
-/information/*  301!
-/broadcast/*  301!
-/news/*  301!
-/announcements/*  301!
-/guide/*  301!
-/main-guide/*  301!
-/wiki/*  301!
+/info/* / 301!
+/information/* / 301!
+/broadcast/* / 301!
+/news/* / 301!
+/announcements/* / 301!
+/guide/* / 301!
+/main-guide/* / 301!
+/wiki/* / 301!
 
 /tag/* /tags 301!
 /category/* /tags 301!
