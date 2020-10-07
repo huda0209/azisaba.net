@@ -35,12 +35,8 @@ module.exports = {
             slug: `/how-to-join`,
           },
           {
-            title: `📚 すべての記事`,
-            slug: `/blog`,
-          },
-          {
-            title: `🏷 すべてのタグ`,
-            slug: `/tags`,
+            title: `投票`,
+            slug: `/vote`,
           },
         ],
         externalLinks: [

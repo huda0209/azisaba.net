@@ -15,14 +15,8 @@
   force = true
 
 [[redirects]]
-  from = "/jms"
-  to = "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/vote"
-  to = "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d/vote"
+  from = "/jms/*"
+  to = "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d/:splat"
   status = 301
   force = true
 
