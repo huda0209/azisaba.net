@@ -17,6 +17,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        formatString: `YYYY年MM月DD日`,
         navigation: [
           {
             title: `ホーム`,
