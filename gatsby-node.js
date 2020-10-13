@@ -3,9 +3,13 @@ exports.createPages = ({ graphql, actions }) => {
 
     createRedirect({ fromPath: "/discord", toPath: "https://discord.gg/seheC2W" })
     createRedirect({ fromPath: "/donate", toPath: "https://store.azisaba.net" })
+    createRedirect({ fromPath: "/jms", toPath: "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d" })
     createRedirect({ fromPath: "/jms/*", toPath: "https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d/:splat" })
+    createRedirect({ fromPath: "/services", toPath: "https://github.com/azisaba" })
+    createRedirect({ fromPath: "/github", toPath: "https://github.com/azisaba" })
 
     createRedirect({ fromPath: "/external", toPath: "/", isPermanent: true })
+    createRedirect({ fromPath: "/welcome", toPath: "/", isPermanent: true })
 
     let wordPressCompat = {
         "/staff": [

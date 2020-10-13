@@ -24,15 +24,11 @@ module.exports = {
             slug: `/`,
           },
           {
-            title: `はじめに`,
-            slug: `/welcome`,
-          },
-          {
             title: `ルール`,
             slug: `/terms`,
           },
           {
-            title: `参加方法`,
+            title: `入り方`,
             slug: `/how-to-join`,
           },
           {
@@ -42,16 +38,20 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Discord`,
+            name: `💬 ディスコード`,
             url: `https://discord.gg/seheC2W`,
           },
           {
-            name: `Twitter`,
+            name: `🐦 ツイッター`,
             url: `https://twitter.com/AzisabaNetwork`,
           },
           {
-            name: `YouTube`,
+            name: `▶ YouTube`,
             url: `https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg`,
+          },
+          {
+            name: `📷 ものすたぐらむ`,
+            url: `https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v/photos`
           }
         ],
       },

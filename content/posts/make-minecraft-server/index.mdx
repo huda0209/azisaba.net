@@ -25,15 +25,15 @@ slug: "/make-minecraft-server"
 
 ![](spigot-logo.png)
 
-##### Bukkitの解散
+#### Bukkitの解散
 
 時は2014年、Bukkit開発チームはマインクラフトサーバーの改造バージョンがMojangに公式に許可をもらっておらず、自信をもって配布することが出来なくなったとして、モチベ不足のためにプロジェクトを廃止することを[決めました](https://bukkit.org/threads/bukkit-its-time-to-say.305106/)。
 
-##### Mojangによる乗っ取り
+#### Mojangによる乗っ取り
 
 この発表後に、MojangがBukkitのプロジェクトを密かに所有していたことを明らかにして、BukkitプロジェクトをMojangが乗っ取りました。
 
-##### DMCAテイクダウン
+#### DMCAテイクダウン
 
 Bukkitチームの一人であるWolvereness氏は、Bukkitのソースコードまたはバイナリの配布を停止するか、GPLの配布条件に従うように提案します。
 
@@ -45,7 +45,7 @@ Bukkitチームの一人であるWolvereness氏は、Bukkitのソースコード
 
 Spigot開発チームはWolvereness氏のコードを書き直すか、削除を受け入れるかに[迫られました](https://www.spigotmc.org/threads/our-dmca-response.28772/)。
 
-##### BuildTools
+#### BuildTools
 
 そこでSpigotは[BuildTools](https://www.spigotmc.org/wiki/buildtools/)を開発し、パソコンでコンパイルさせることでこれを回避しました。 (天才かな？)
 
@@ -59,11 +59,11 @@ PaperはSpigotをさらに最適化し、多数のバグ修正を含んていま
 
 ![](paper-logo.png)
 
-##### プラグインをそのまま使える
+#### プラグインをそのまま使える
 
 BukkitやSpigotで使えるプラグインと互換性があるので、ほとんどのユーザーがそのまま移行することが出来ます。便利
 
-##### Paperclip
+#### Paperclip
 
 さらにPaperでは、[Paperclip](https://github.com/PaperMC/Paperclip)というバイナリパッチを生成してファイルに突っ込んで配布し、実行時にバニラサーバーにパッチを当てるというシステムを採用しています。
 
@@ -81,11 +81,11 @@ PaperはJavaで書かれているので動かすにはJavaが必要です。
 
 そしてオラクルのサイトがログイン必須になってしまったので今回はOpenJDKを使用します！(重要)
 
-##### Javaインストール手順
+#### Javaインストール手順
 
 1. [AdoptOpenJDK](https://adoptopenjdk.net)のサイトにアクセスします。
-2. `Choose a Version`の項目で`OpenJDK 8 (LTS)`を選択します。
-3. 下の`Latest release`をクリックしてダウンロード開始！
+2. <u>Choose a Version</u>の項目で<u>OpenJDK 8 (LTS)</u>を選択します。
+3. 下の<u>Latest release</u>をクリックしてダウンロード開始！
 
 ![](jdk-download.png)
 
@@ -104,46 +104,46 @@ PaperはJavaで書かれているので動かすにはJavaが必要です。
 
 ![](paper-download.png)
 
-3. そしてダウンロードしたものを新しいフォルダに移動しよう！ (今回は`server`という名前にしました)
+3. そしてダウンロードしたものを新しいフォルダに移動しよう！ (今回は `server` という名前にしました)
 
 ![](paper-copy-file.png)
 
 ### ダブルクリックで起動可能にする
 
-1. Paperと同じフォルダ内で右クリックして`新規作成`から`テキスト ドキュメント`を選択！
+1. Paperと同じフォルダ内で右クリックして<u>新規作成</u>から<u>テキスト ドキュメント</u>を選択！
 
 ![](batch-create.png)
 
-2. `start.bat`という名前に変更します。 (拡張子が`.bat`ならなんでもOK)
+2. `start.bat` という名前に変更します。 (拡張子が `.bat` ならなんでもOK)
 
 ![](batch-rename.png)
 
-3. 作成した`start.bat`を右クリックして`編集`を選択します。
+3. 作成した `start.bat` を右クリックして<u>編集</u>を選択します。
 
 ![](batch-edit.png)
 
-4. 以下の内容を入力します。 (`paper-186.jar`の部分を自分のPaperのファイル名と合わせよう！)
+4. 以下の内容を入力します。 (`paper-186.jar` の部分を自分のPaperのファイル名と合わせよう！)
 
 ```batch
 @echo off
 java -Dcom.mojang.eula.agree=true -jar paper-186.jar nogui
 ```
 
-5. 入力し終わったら、`Ctrl`キーと`S`キーを同時押しして保存してから閉じます！
+5. 入力し終わったら、 `Ctrlキー` と `Sキー` を同時押しして保存してから閉じます！
 
 ### 早速起動してみるぜ？
 
-1. `start.bat`を**ダブルクリック**します！
+1. `start.bat` を**ダブルクリック**します！
 
 ![](paper-start.png)
 
-2. 勝手に起動します。`Done`と表示されれば完了！
+2. 勝手に起動します。**Done**と表示されれば完了！
 
 ![](paper-done.png)
 
 そしたらサーバーは一旦おいといて、マインクラフトを起動します。
 
-マルチプレイからサーバーを追加し、サーバーアドレスに`127.0.0.1`を使用してください。
+マルチプレイからサーバーを追加し、サーバーアドレスに `127.0.0.1` を使用してください。
 
 どうでしょうか？入れましたでしょうか？
 
