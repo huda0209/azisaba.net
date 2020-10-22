@@ -32,6 +32,8 @@
       link: https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v
 - label: その他
   items:
+    - label: '公式Wiki'
+      link: https://azisabaofficial.playing.wiki
     - label: '寄付サイト'
       link: https://store.azisaba.net
     - label: 'ステータス'
