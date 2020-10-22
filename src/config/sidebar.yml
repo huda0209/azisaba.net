@@ -4,6 +4,8 @@
   link: '/'
 - label: '入り方'
   link: '/join'
+- label: 'ルール'
+  link: '/terms'
 - label: さらに
   items:
     - label: 'よくある質問'
