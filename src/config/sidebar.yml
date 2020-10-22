@@ -1,0 +1,22 @@
+# Sidebar navigation
+
+- label: 'ようこそ'
+  link: '/'
+- label: '入り方'
+  link: '/join'
+- label: もっと表示
+  items:
+    - label: 'よくある質問'
+      link: '/faq'
+    - label: '内部アドレス'
+      link: '/address'
+- label: 外部リンク
+  items:
+    - label: 'Discord'
+      link: https://discord.gg/seheC2W
+    - label: 'Twitter'
+      link: https://twitter.com/AzisabaNetwork
+    - label: 'YouTube'
+      link: https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg
+    - label: 'GitHub'
+      link: https://github.com/azisaba
