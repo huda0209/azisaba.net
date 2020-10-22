@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rocketseat Gatsby Themes`,
-        short_name: `RS Gatsby Themes`,
+        name: `アジ鯖公式ホームページ`,
+        short_name: `アジ鯖`,
         start_url: `/`,
         background_color: `#ffffff`,
         display: `standalone`,
