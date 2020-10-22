@@ -6,6 +6,8 @@
   link: '/join'
 - label: 'ルール'
   link: '/terms'
+- label: '運営一覧'
+  link: '/staff'
 - label: さらに
   items:
     - label: 'よくある質問'
