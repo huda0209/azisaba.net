@@ -1,4 +1,4 @@
-# Sidebar navigation
+# サイドバー
 
 - label: 'ようこそ'
   link: '/'
@@ -14,6 +14,9 @@
       link: '/faq'
     - label: '内部アドレス'
       link: '/address'
+
+# 外部リンク
+
 - label: コミュニティー
   items:
     - label: 'Discord'
@@ -27,9 +30,11 @@
 - label: 投票
   items:
     - label: 'Japan Minecraft Servers'
-      link: https://minecraft.jp/servers/59b7c551a9b0bd23dc00834d
+      link: https://minecraft.jp/servers/azisaba.net
     - label: 'monocraft'
       link: https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v
+    - label: 'NameMC'
+      link: https://ja.namemc.com/server/azisaba.net
 - label: その他
   items:
     - label: '公式Wiki'
@@ -40,3 +45,19 @@
       link: https://status.azisaba.net
     - label: 'リソースパック'
       link: https://packs.azisaba.net
+- label: 協力と提携
+  items:
+    - label: 'DDPS 様'
+      link: https://ddps.jp
+    - label: 'ちゃぶだいさ～ば～ 様'
+      link: https://chabudai.xyz
+    - label: 'Strife 様'
+      link: https://twitter.com/STRIFE_mcserver
+    - label: 'Coretol 様'
+      link: https://matchatb.wixsite.com/coretol
+- label: 開発者向け
+  items:
+    - label: 'PageSpeed Insights'
+      link: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fazisaba.net%2F
+    - label: 'Minecraft Server Status'
+      link: https://mcsrvstat.us/server/azisaba.net
