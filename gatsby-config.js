@@ -6,9 +6,9 @@ module.exports = {
     siteDescription: `アジ鯖、たのしい。`,
     siteUrl: `https://azisaba.net`,
     siteAuthor: `@azisaba`,
-    siteImage: `/banner.png`,
+    siteImage: `/sexy-banner.png`,
     siteLanguage: `en`,
-    themeColor: `#7FFFD4`,
+    themeColor: `#8257E6`,
     basePath: `/`,
   },
   plugins: [
