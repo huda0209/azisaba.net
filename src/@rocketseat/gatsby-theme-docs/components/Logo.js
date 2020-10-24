@@ -9,7 +9,7 @@ export default function Logo(props) {
       alignItems: 'center',
       justifyContent: 'center',
     }} {...props}>
-      <img width={34} src="/favicon.png" alt="Favicon" />
+      <img src="https://i.azisaba.net/logo-icon.png" alt="Logo Icon" />
       <div style={{
         display: 'flex',
         alignItems: 'center',
