@@ -17,33 +17,15 @@
 
 # 外部リンク
 
-- label: コミュニティー
+- label: 外部リンク
   items:
-    - label: 'Discord'
-      link: https://discord.gg/seheC2W
-    - label: 'Twitter'
-      link: https://twitter.com/AzisabaNetwork
-    - label: 'YouTube'
-      link: https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg
-    - label: 'GitHub'
-      link: https://github.com/azisaba
-- label: 投票
-  items:
-    - label: 'Japan Minecraft Servers'
-      link: https://minecraft.jp/servers/azisaba.net
-    - label: 'monocraft'
-      link: https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v
-    - label: 'NameMC'
-      link: https://ja.namemc.com/server/azisaba.net
-- label: その他
-  items:
-    - label: '公式Wiki'
-      link: https://azisabaofficial.playing.wiki
-    - label: '寄付サイト'
+    - label: '🔗 Linktree'
+      link: https://linktr.ee/azisaba
+    - label: '💸 寄付'
       link: https://store.azisaba.net
-    - label: 'ステータス'
+    - label: '✅ ステータス'
       link: https://status.azisaba.net
-    - label: 'リソースパック'
+    - label: '📥 リソースパック'
       link: https://packs.azisaba.net
 - label: 協力と提携
   items:
@@ -55,9 +37,3 @@
       link: https://twitter.com/STRIFE_mcserver
     - label: 'Coretol 様'
       link: https://matchatb.wixsite.com/coretol
-- label: 開発者向け
-  items:
-    - label: 'PageSpeed Insights'
-      link: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fazisaba.net%2F
-    - label: 'Minecraft Server Status'
-      link: https://mcsrvstat.us/server/azisaba.net
