@@ -9,7 +9,7 @@ export default function Logo(props) {
       alignItems: 'center',
       justifyContent: 'center',
     }} {...props}>
-      <img src="https://i.azisaba.net/logo-icon.png" alt="Logo Icon" />
+      <img src="https://i.azisaba.net/logo-icon.png" alt="アジ鯖のロゴアイコン" />
       <div style={{
         display: 'flex',
         alignItems: 'center',
