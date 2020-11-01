@@ -17,7 +17,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/azisaba/web`,
+        githubUrl: `https://github.com/azisaba/website`,
         baseDir: `/`,
       },
     },
