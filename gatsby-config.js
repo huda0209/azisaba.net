@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://azisaba.net`,
     siteAuthor: `@azisaba`,
     siteImage: `/sexy-banner.png`,
-    siteLanguage: `en`,
+    siteLanguage: `ja`,
     themeColor: `#8257E6`,
     basePath: `/`,
   },
