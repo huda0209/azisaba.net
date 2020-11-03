@@ -1,15 +1,17 @@
 # サイドバー
 
-- label: 'ようこそ'
-  link: '/'
-- label: '入り方'
-  link: '/join'
-- label: 'ルール'
-  link: '/terms'
-- label: '運営一覧'
-  link: '/staff'
-- label: さらに
+- label: はじめに
   items:
+    - label: 'ようこそ'
+      link: '/'
+    - label: '入り方'
+      link: '/join'
+    - label: 'ルール'
+      link: '/terms'
+- label: もっと詳しく
+  items:
+    - label: '運営一覧'
+      link: '/staff'
     - label: 'よくある質問'
       link: '/faq'
     - label: '内部アドレス'
