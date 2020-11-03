@@ -5,7 +5,7 @@ module.exports = {
     siteTitleShort: `アジ鯖`,
     siteDescription: `アジ鯖は誰でも楽しめるサーバーを提供しているJava版マインクラフトのサーバーです。日々進化を続けるアジ鯖に参加して人生をより豊かにしよう。`,
     siteUrl: `https://azisaba.net`,
-    siteAuthor: `@azisaba`,
+    siteAuthor: `@AzisabaNetwork`,
     siteImage: `/sexy-banner.png`,
     siteLanguage: `ja`,
     themeColor: `#8257E6`,
