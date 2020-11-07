@@ -9,7 +9,7 @@ export default function Logo(props) {
       alignItems: 'center',
       justifyContent: 'center',
     }} {...props}>
-      <img src="https://images.weserv.nl/?url=https://i.azisaba.net/branding/1533483330415.jpg&w=48&output=webp" alt="アジ鯖のロゴ部分のアイコン" />
+      <img src="https://images.weserv.nl/?url=https://i.azisaba.net/branding/1533483330415.jpg&w=48&output=webp&we" alt="アジ鯖のロゴ部分のアイコン" />
       <span style={{
         color: '#000000',
         fontSize: '1.4em',
