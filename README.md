@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://images.weserv.nl/?url=https://i.azisaba.net/albums/2020-11-01_06.01.22.png&w=512&output=webp&we">
+  <img src="https://i.azisaba.net/albums/2020-11-01_06.01.22.png">
 </p>
 
 テーマは[@rocketseat/gatsby-theme-docs](https://github.com/Rocketseat/gatsby-themes/tree/master/%40rocketseat/gatsby-theme-docs)からお借りしています。
