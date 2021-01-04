@@ -3,6 +3,7 @@
     import Button, { Label } from "@smui/button";
     import DataTable, { Head, Body, Row, Cell } from "@smui/data-table";
 
+    let loadWidget = false;
     let reasonDialog = false;
     let ruleDialog = false;
 </script>
@@ -24,7 +25,10 @@
     </p>
     <p>
         サーバーを立ち上げた理由を、後に鯖主自ら<u
-            on:click={() => reasonDialog.open()}>こう語っている</u>。
+            on:click={() => {
+                reasonDialog.open();
+                loadWidget = true;
+            }}>こう語っている</u>。
     </p>
     <Dialog bind:this={reasonDialog} aria-describedby="slider-content">
         <Title id="event-title">なぜ新しくサーバーを立ち上げた？</Title>
@@ -37,11 +41,13 @@
                     href="https://twitter.com/azi_blueline/status/1305147053152985090?ref_src=twsrc%5Etfw">September
                     13, 2020</a>
             </blockquote>
-            <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8">
-            </script>
+            {#if loadWidget}
+                <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8">
+                </script>
+            {/if}
         </Content>
         <Actions>
             <Button>

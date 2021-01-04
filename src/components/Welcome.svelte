@@ -2,19 +2,17 @@
     import { onMount } from "svelte";
 
     const bgArray = [
-        "https://i.azisaba.net/albums/2020-11-01_06.01.22.png",
-        "https://i.azisaba.net/albums/2020-08-14_01.06.04.png",
-        "https://i.azisaba.net/albums/2020-08-30_21.41.00.png",
-        "https://i.azisaba.net/albums/2019-07-04_19.43.33.png",
-        "https://i.azisaba.net/albums/2019-04-01_14.13.09.png",
-        "https://i.azisaba.net/albums/2020-06-13_00.17.20.png",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2020-11-01_06.01.22.png&w=1280&output=webp",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2020-08-14_01.06.04.png&w=1280&output=webp",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2020-08-30_21.41.00.png&w=1280&output=webp",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2019-07-04_19.43.33.png&w=1280&output=webp",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2019-04-01_14.13.09.png&w=1280&output=webp",
+        "https://images.weserv.nl/?url=https://i.azisaba.net/albums/2020-06-13_00.17.20.png&w=1280&output=webp",
     ];
 
-    onMount(async () => {
-        const bg =
-            "url(https://images.weserv.nl/?url=" +
-            bgArray[Math.floor(Math.random() * bgArray.length)] +
-            "&w=1280&h=720&output=webp";
+    onMount(() => {
+        const bgRandom = bgArray[Math.floor(Math.random() * bgArray.length)];
+        const bg = `url(${bgRandom})`;
         document.getElementsByClassName("cover")[0].style.backgroundImage = bg;
     });
 </script>
