@@ -14,6 +14,7 @@
     import LogoTwitter20 from "carbon-icons-svelte/lib/LogoTwitter20";
     import Chat20 from "carbon-icons-svelte/lib/Chat20";
     import LogoGithub20 from "carbon-icons-svelte/lib/LogoGithub20";
+    import Launch20 from "carbon-icons-svelte/lib/Launch20";
 
     const socials = [
         {
@@ -73,8 +74,12 @@
         },
     ];
 
-    let isOpen = false;
+    let isSocialOpen = false;
+    let isDetailsOpen = false;
+    let width = 0;
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <Header company="アジ鯖" platformName="公式ホームページ" href="/">
     <div slot="skip-to-content">
@@ -82,15 +87,33 @@
     </div>
 
     <HeaderUtilities>
-        {#each socials as social}
-            <HeaderActionLink
-                title={social.name}
-                icon={{ render: social.icon }}
-                href={social.url}
-                target="_blank" />
-        {/each}
+        {#if width > 768}
+            {#each socials as social}
+                <HeaderActionLink
+                    title={social.name}
+                    icon={{ render: social.icon }}
+                    href={social.url}
+                    target="_blank" />
+            {/each}
+        {:else}
+            <HeaderAction
+                bind:isOpen={isSocialOpen}
+                icon={{ render: Launch20 }}>
+                <HeaderPanelLinks>
+                    <HeaderPanelDivider>ソーシャル</HeaderPanelDivider>
+                    {#each socials as social}
+                        <HeaderPanelLink
+                            title={social.name}
+                            href={social.url}
+                            target="_blank">
+                            {social.name}
+                        </HeaderPanelLink>
+                    {/each}
+                </HeaderPanelLinks>
+            </HeaderAction>
+        {/if}
 
-        <HeaderAction bind:isOpen>
+        <HeaderAction bind:isOpen={isDetailsOpen}>
             <HeaderPanelLinks>
                 {#each items as item}
                     {#if typeof item === 'string'}
