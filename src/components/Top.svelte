@@ -1,10 +1,13 @@
 <script>
+    import { onMount } from "svelte";
+    import { blur, fly } from "svelte/transition";
+
     import { Button } from "carbon-components-svelte";
 
     import Renew20 from "carbon-icons-svelte/lib/Renew20";
     import CenterToFit20 from "carbon-icons-svelte/lib/CenterToFit20";
 
-    const backgrounds = [
+    const photos = [
         "https://i.azisaba.net/albums/2020-11-01_06.01.22.png",
         "https://i.azisaba.net/albums/2020-08-14_01.06.04.png",
         "https://i.azisaba.net/albums/2020-08-30_21.41.00.png",
@@ -12,10 +15,18 @@
         "https://i.azisaba.net/albums/2019-04-01_14.13.09.png",
         "https://i.azisaba.net/albums/2020-06-13_00.17.20.png",
     ];
-    function randomBackground() {
-        return backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+    function randomPhoto() {
+        return photos[Math.floor(Math.random() * photos.length)];
     }
-    let bg = randomBackground();
+
+    let bg = randomPhoto();
+    $: bgCover = `https://images.weserv.nl/?url=${bg}&w=768&output=webp`;
+
+    let visible;
+    onMount(() => {
+        visible = true;
+    });
 </script>
 
 <style>
@@ -24,107 +35,75 @@
         position: relative;
     }
 
-    .bg {
-        width: 100%;
-        height: 100%;
-
+    .bg,
+    .title {
         position: absolute;
-        z-index: -2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
-        background-repeat: no-repeat;
+    .bg {
+        z-index: -1;
+
         background-size: cover;
         background-position: center;
     }
 
-    .bg--filter {
-        width: 100%;
-        height: 100%;
-
-        position: absolute;
-        z-index: -1;
-
-        animation-name: bg--filter--blur;
-        animation-duration: 16s;
-    }
-
-    @keyframes bg--filter--blur {
-        20% {
-            backdrop-filter: blur(0.3rem);
-        }
-    }
-
-    .tool {
-        margin: 1rem;
-
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
     .title {
-        height: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
 
-    .title > * {
         color: white;
-        text-shadow: 0.05em 0.05em 0.2rem black;
-        opacity: 0;
-
-        animation-name: title--show;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
+        text-shadow: 0.1rem 0.1rem 0.2rem black;
     }
 
-    .title > span {
-        margin-top: 3rem;
-        animation-delay: 0.6s;
+    .title > h1 {
+        margin-bottom: 2rem;
     }
 
-    @keyframes title--show {
-        from {
-            transform: translateY(1em);
-        }
-        to {
-            opacity: 1;
-        }
+    .tool {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 </style>
 
-<section>
-    <div
-        class="bg"
-        style="background-image: url(https://images.weserv.nl/?url={bg}&w=768&output=webp);" />
-    <div class="bg--filter" />
+{#if visible}
+    <section>
+        <div
+            class="bg"
+            style="background-image: url({bgCover})"
+            in:blur={{ duration: 5000, opacity: 1 }} />
 
-    <div class="tool">
-        <Button
-            hasIconOnly
-            icon={Renew20}
-            iconDescription="別の画像"
-            tooltipPosition="bottom"
-            tooltipAlignment="center"
-            kind="secondary"
-            on:click={() => {
-                bg = randomBackground();
-            }} />
-        <Button
-            hasIconOnly
-            icon={CenterToFit20}
-            iconDescription="全画面"
-            tooltipPosition="bottom"
-            tooltipAlignment="center"
-            on:click={() => {
-                window.open(bg, '_blank');
-            }} />
-    </div>
+        <div class="title">
+            <h1 in:fly={{ delay: 200, y: 20 }}>ようこそ</h1>
+            <span in:fly={{ delay: 600, y: 20 }}>アジ鯖、たのしい。</span>
+        </div>
 
-    <div class="title">
-        <h1>ようこそ</h1>
-        <span>アジ鯖、たのしい。</span>
-    </div>
-</section>
+        <div class="tool">
+            <Button
+                hasIconOnly
+                icon={Renew20}
+                iconDescription="別の画像"
+                tooltipPosition="bottom"
+                tooltipAlignment="center"
+                kind="secondary"
+                on:click={() => {
+                    bg = randomPhoto();
+                }} />
+            <Button
+                hasIconOnly
+                icon={CenterToFit20}
+                iconDescription="全画面"
+                tooltipPosition="bottom"
+                tooltipAlignment="center"
+                on:click={() => {
+                    window.open(bg, '_blank');
+                }} />
+        </div>
+    </section>
+{/if}
