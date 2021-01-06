@@ -26,7 +26,7 @@
 
 <Content>
 	{#if visible}
-		<section in:scale={{ start: 1.03 }}>
+		<section in:scale={{ start: 1.02 }}>
 			<Top />
 		</section>
 		<section in:blur>
