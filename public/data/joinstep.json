@@ -1,0 +1,48 @@
+[
+    {
+        "title": "購入",
+        "texts": [
+            "マインクラフトの公式サイトに行き、Java版マインクラフトの購入手続きをしてください。",
+            "購入が終わったらダウンロードし、お使いのパソコンにインストールしてください。"
+        ],
+        "image": "https://images.weserv.nl/?url=https://www.minecraft.net/content/dam/games/minecraft/logos/Minecraft-Java_Keyart_255x383.jpg&w=512&output=webp&we"
+    },
+    {
+        "title": "起動",
+        "texts": [
+            "マインクラフトを起動してください。",
+            "初回起動の場合はログインを要求されるので、そのままログインしてください。"
+        ],
+        "image": "https://images.weserv.nl/?url=https://i.azisaba.net/join2020/connect1.png&w=512&output=webp&we"
+    },
+    {
+        "title": "マルチプレイの選択",
+        "texts": [
+            "起動したら「マルチプレイ」を選択してください。"
+        ],
+        "image": "https://images.weserv.nl/?url=https://i.azisaba.net/join2020/connect2.png&w=512&output=webp"
+    },
+    {
+        "title": "サーバーの追加",
+        "texts": [
+            "右下の「サーバーを追加」を選択してください。"
+        ],
+        "image": "https://images.weserv.nl/?url=https://i.azisaba.net/join2020/connect3.png&w=512&output=webp"
+    },
+    {
+        "title": "サーバー情報の入力",
+        "texts": [
+            "「サーバー名」はお好きなものを入力してください。",
+            "「サーバーアドレス」に「azisaba.net」と入力し、「完了」を押してください。"
+        ],
+        "image": "https://images.weserv.nl/?url=https://i.azisaba.net/join2020/connect4.png&w=512&output=webp"
+    },
+    {
+        "title": "サーバーに接続",
+        "texts": [
+            "魚のアイコンとアジ鯖が表示されます。",
+            "ダブルクリックか左下の「サーバーに接続」を選択して、接続しよう！"
+        ],
+        "image": "https://images.weserv.nl/?url=https://i.azisaba.net/join2020/connect5.png&w=512&output=webp"
+    }
+]
