@@ -13,7 +13,7 @@
 
 <style>
 	section {
-		height: calc(100vh - 7rem);
+		height: calc(100vh - var(--cds-layout-04));
 	}
 
 	.abs {
@@ -48,7 +48,7 @@
 	<title>アジ鯖公式ホームページ</title>
 </svelte:head>
 
-<section in:fade>
+<section class="abs" in:fade>
 	<div
 		class="abs bg"
 		style="background-image: url({bg})"
