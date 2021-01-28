@@ -3,6 +3,8 @@
         CodeSnippet,
         Accordion,
         AccordionItem,
+        Link,
+        Tooltip,
     } from "carbon-components-svelte";
 
     function copy(text) {
@@ -66,7 +68,20 @@
 
 <h1>今すぐ参加</h1>
 
-<p>アジ鯖はバニラまたはOptiFineクライアントの使用を推奨しています。</p>
+<p>
+    アジ鯖はバニラまたは<Link href="https://optifine.net/home" target="_blank"
+        >OptiFine</Link
+    >クライアントの使用を推奨しています。
+</p>
+
+<Tooltip triggerText="バニラとは？" align="start">
+    <p>外部のMODなどを一切追加していない初期状態のこと。</p>
+</Tooltip>
+<Tooltip triggerText="クライアントとは？" align="start">
+    <p>
+        サーバーが参加する「場所」なのに対し、クライアントは参加する「人」や「ソフトウェア」のことです。
+    </p>
+</Tooltip>
 
 <h4>公開IPアドレス</h4>
 
@@ -104,3 +119,7 @@
         </AccordionItem>
     {/each}
 </Accordion>
+
+<h4>オリジンサーバー (アジ鯖本体)</h4>
+
+<p>IPアドレスは非公開です。</p>

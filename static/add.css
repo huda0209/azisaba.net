@@ -11,3 +11,8 @@ p {
     margin-top: var(--cds-layout-01);
     margin-bottom: var(--cds-layout-01);
 }
+
+.bx--tooltip__label {
+    margin-top: var(--cds-spacing-03);
+    margin-bottom: var(--cds-spacing-03);
+}
