@@ -46,6 +46,7 @@
 
 <svelte:head>
 	<title>アジ鯖公式ホームページ</title>
+	<meta name="description" content="アジ鯖、たのしい。" />
 </svelte:head>
 
 <section class="abs" in:fade>
