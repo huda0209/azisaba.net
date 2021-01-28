@@ -16,3 +16,13 @@ p {
     margin-top: var(--cds-spacing-03);
     margin-bottom: var(--cds-spacing-03);
 }
+
+@media screen and (max-width: calc(1056px - 1px)) {
+    .bx--side-nav.bx--side-nav--expanded ~ .bx--content {
+        margin-left: 0;
+    }
+
+    .bx--side-nav ~ .bx--content {
+        margin-left: 0;
+    }
+}
