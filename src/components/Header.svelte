@@ -1,12 +1,25 @@
 <script>
     import {
         Header,
+        HeaderUtilities,
+        HeaderActionLink,
         SideNav,
         SideNavItems,
         SideNavMenu,
         SideNavLink,
         SkipToContent,
     } from "carbon-components-svelte";
+
+    import ChatBot24 from "carbon-icons-svelte/lib/ChatBot24";
+    import LogoYoutube24 from "carbon-icons-svelte/lib/LogoYoutube24";
+    import LogoTwitter24 from "carbon-icons-svelte/lib/LogoTwitter24";
+    import LogoGithub24 from "carbon-icons-svelte/lib/LogoGithub24";
+
+    import ChatBot32 from "carbon-icons-svelte/lib/ChatBot32";
+    import LogoYoutube32 from "carbon-icons-svelte/lib/LogoYoutube32";
+    import LogoTwitter32 from "carbon-icons-svelte/lib/LogoTwitter32";
+    import LogoGithub32 from "carbon-icons-svelte/lib/LogoGithub32";
+
     import FavoriteFilled32 from "carbon-icons-svelte/lib/FavoriteFilled32";
     import Fish32 from "carbon-icons-svelte/lib/Fish32";
     import Book32 from "carbon-icons-svelte/lib/Book32";
@@ -15,8 +28,40 @@
 
     export let segment;
 
+    const socials = [
+        {
+            name: "Discord",
+            iconMini: ChatBot24,
+            icon: ChatBot32,
+            url: "https://discord.gg/azisaba",
+        },
+        {
+            name: "Twitter",
+            iconMini: LogoTwitter24,
+            icon: LogoTwitter32,
+            url: "https://twitter.com/AzisabaNetwork",
+        },
+        {
+            name: "YouTube",
+            iconMini: LogoYoutube24,
+            icon: LogoYoutube32,
+            url: "https://www.youtube.com/channel/UCHkH9_MKql1MFi0MZ_tqQbg",
+        },
+        {
+            name: "GitHub",
+            iconMini: LogoGithub24,
+            icon: LogoGithub32,
+            url: "https://github.com/azisaba",
+        },
+    ];
+
+    let innerWidth;
+    $: isMobile = innerWidth < 1056;
+
     let isSideNavOpen = false;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <Header
     company="アジ鯖"
@@ -27,6 +72,19 @@
     <div slot="skip-to-content">
         <SkipToContent />
     </div>
+
+    {#if !isMobile}
+        <HeaderUtilities>
+            {#each socials as social}
+                <HeaderActionLink
+                    title={social.name}
+                    icon={{ render: social.iconMini }}
+                    href={social.url}
+                    target="_blank"
+                />
+            {/each}
+        </HeaderUtilities>
+    {/if}
 </Header>
 
 <SideNav bind:isOpen={isSideNavOpen}>
@@ -74,6 +132,16 @@
                 href="https://packs.azisaba.net"
                 target="_blank"
             />
+        </SideNavMenu>
+        <SideNavMenu text="共有する" expanded={true}>
+            {#each socials as social}
+                <SideNavLink
+                    icon={{ render: social.icon }}
+                    text={social.name}
+                    href={social.url}
+                    target="_blank"
+                />
+            {/each}
         </SideNavMenu>
     </SideNavItems>
 </SideNav>
