@@ -55,6 +55,26 @@
         },
     ];
 
+    const menu = [
+        {
+            title: "投票する",
+            items: [
+                {
+                    name: "Japan Minecraft Servers",
+                    url: "https://minecraft.jp/servers/azisaba.net",
+                },
+                {
+                    name: "monocraft",
+                    url: "https://monocraft.net/servers/xWBVrf1nqB2P0LxlMm2v",
+                },
+                {
+                    name: "NameMC",
+                    url: "https://ja.namemc.com/server/azisaba.net",
+                },
+            ],
+        },
+    ];
+
     let innerWidth;
     $: isMobile = innerWidth < 1056;
 
@@ -121,6 +141,17 @@
             <SideNavLink icon={{ render: Locked32 }} text="運営一覧" />
             <SideNavLink icon={{ render: Locked32 }} text="スポンサー" />
         </SideNavMenu>
+        {#each menu as category}
+            <SideNavMenu text={category.title} expanded={false}>
+                {#each category.items as item}
+                    <SideNavLink
+                        text={item.name}
+                        href={item.url}
+                        target="_blank"
+                    />
+                {/each}
+            </SideNavMenu>
+        {/each}
         <SideNavMenu text="その他">
             <SideNavLink
                 text="接続チェック"
